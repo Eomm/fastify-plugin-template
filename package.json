@@ -1,6 +1,6 @@
 {
   "name": "template-nodejs",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "<CHANGE ME>",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,6 @@
   "homepage": "https://github.com/Eomm/<CHANGE ME>#readme",
   "devDependencies": {
     "standard": "^16.0.3",
-    "tap": "^14.11.0"
+    "tap": "^15.0.9"
   }
 }

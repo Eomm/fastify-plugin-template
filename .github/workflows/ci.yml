@@ -2,7 +2,13 @@ name: ci
 
 on:
   push:
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
   pull_request:
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
   schedule:
     - cron: "1 0 * * 0"
 
@@ -14,18 +20,20 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [12, 14, 16]
         os: [ubuntu-latest, windows-latest]
     steps:
       - uses: actions/checkout@v2
+
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
 
       - name: Install
         run: |
           npm install --ignore-scripts
+
       - name: Run tests
         run: |
           npm test
@@ -34,7 +42,6 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - uses: fastify/github-action-merge-dependabot@v2.0.0
-        if: ${{ github.actor == 'dependabot[bot]' && github.event_name == 'pull_request' }}
+      - uses: fastify/github-action-merge-dependabot@v2.2.0
         with:
-          github-token: ${{secrets.github_token}}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
