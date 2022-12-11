@@ -1,19 +1,23 @@
 {
-  "name": "template-nodejs",
+  "name": "<CHANGE ME>",
   "version": "0.0.1",
   "description": "<CHANGE ME>",
   "main": "index.js",
   "scripts": {
     "lint": "standard",
     "lint:fix": "standard --fix",
-    "test": "npm run lint && npm run test:unit",
-    "test:unit": "tap test/**/*.test.js"
+    "test": "tap test/**/*.test.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Eomm/<CHANGE ME>.git"
   },
-  "keywords": [],
+  "keywords": [
+    "fastify",
+    "plugin",
+    "fastify-plugin",
+    "<CHANGE ME>"
+  ],
   "author": "Manuel Spigolon <behemoth89@gmail.com> (https://github.com/Eomm)",
   "license": "MIT",
   "bugs": {
@@ -21,7 +25,11 @@
   },
   "homepage": "https://github.com/Eomm/<CHANGE ME>#readme",
   "devDependencies": {
-    "standard": "^16.0.3",
-    "tap": "^15.0.9"
+    "fastify": "^4.10.2",
+    "standard": "^17.0.0",
+    "tap": "^16.3.2"
+  },
+  "dependencies": {
+    "fastify-plugin": "^4.4.0"
   }
 }

@@ -1,6 +1,6 @@
 # template-nodejs
 
-Template per Node.js modules  
+A template to build a Fastify plugin!  
 Look for `CHANGE ME` string to spot where adjust this template.
 
 ---
@@ -21,6 +21,12 @@ CHANGE ME: module description
 npm install <CHANGE ME>
 ```
 
+### Compatibility
+
+| Plugin version | Fastify version |
+| -------------- |:---------------:|
+| `^1.0.0`       | `^4.0.0`        |
+
 
 ## Usage
 
@@ -40,4 +46,4 @@ You can pass the following options during the registration:
 
 ## License
 
-Copyright [Manuel Spigolon](https://github.com/Eomm), Licensed under [MIT](./LICENSE).
+Licensed under [MIT](./LICENSE).
