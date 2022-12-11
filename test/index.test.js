@@ -1,10 +1,24 @@
 'use strict'
 
 const { test } = require('tap')
-const CHANGE_ME = require('../index')
+const fastify = require('fastify')
 
-test('CHANGE ME', t => {
+const plugin = require('../index')
+
+async function buildApp (t, opts) {
+  const app = fastify()
+  app.register(plugin, opts)
+  t.tearDown(() => app.close())
+
+  return app
+}
+
+test('Basic usage', async t => {
   t.plan(1)
-  CHANGE_ME()
+
+  const app = await buildApp(t)
+
+  await app.ready()
+
   t.pass('CHANGE ME')
 })
