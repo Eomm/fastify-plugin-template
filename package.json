@@ -6,7 +6,9 @@
   "scripts": {
     "lint": "standard",
     "lint:fix": "standard --fix",
-    "test": "tap test/**/*.test.js"
+    "test": "npm run test:unit && npm run test:typescript",
+    "test:typescript": "tsd",
+    "test:unit": "tap"
   },
   "repository": {
     "type": "git",
@@ -27,7 +29,8 @@
   "devDependencies": {
     "fastify": "^4.10.2",
     "standard": "^17.0.0",
-    "tap": "^16.3.2"
+    "tap": "^16.3.2",
+    "tsd": "^0.25.0"
   },
   "dependencies": {
     "fastify-plugin": "^4.4.0"
