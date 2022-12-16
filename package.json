@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "<CHANGE ME>",
   "main": "index.js",
-  "types": "types/indey.d.ts",
+  "types": "types/index.d.ts",
   "scripts": {
     "lint": "standard",
     "lint:fix": "standard --fix",
