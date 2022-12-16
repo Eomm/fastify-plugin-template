@@ -8,7 +8,7 @@ const plugin = require('../index')
 async function buildApp (t, opts) {
   const app = fastify()
   app.register(plugin, opts)
-  t.tearDown(() => app.close())
+  t.teardown(() => app.close())
 
   return app
 }
